@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title> 
+</head>
+<body>
+
+    <h2 style="color: red;">lots of vic info commented in code</h2>
+    <h1> forms </h1>
+
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form</a>
+
+    
+    <h2>text input</h2>
+
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input</a>
+    
+
+    <input type="text" 
+    placeholder="username" >
+    <input type="text" placeholder="city">
+
+    <hr>
+
+    <h2>email input</h2>
+    <input type="email" placeholder="email" value="gang
+    ">
+
+    <hr>
+
+    <h2> Color input</h2>
+    <input type="color" value="#1f2024">
+
+    <hr>
+
+    <h2>number input</h2>
+    <h4>first one</h4>
+     <input type="number">
+    <h4>second one</h4>
+     <input type="number" min="5" max="25" step="3" >
+
+     <hr>
+
+     <h2>password input</h2>
+     <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label</a>
+
+
+     <label for="password">Enter a strong password</label>
+     <input type="password" placeholder="password" id="password">
+
+     <label for="Confirm">Confirm the password</label>
+     <input type="password" placeholder="Confirm password" id="Confirm">
+
+     <hr>
+
+     <h2>form element</h2> <!--the form elements acts as a container for inputs of info/data you want to be submitted together to some common place in a single request.-->
+
+     <form action="http/www.google.com"> <!-- form data is sent to the address in the action attribute -->
+         <input type="text" placeholder="username" name="username"> <!-- name attribute is the name of the piece of data when it's sent to a server. -->
+         <input type="password" placeholder="password" name="password">
+         <input type="submit">
+     </form>
+
+     <h3> reddit search  </h3>
+     <form action="https://www.reddit.com/search/">
+        <input type="text" name="q" >
+        <input type="submit">
+    </form> 
+    
+    <hr>
+
+    <h2>submit btns</h2>
+    <button>submit</button>
+    <input type="submit" value="go">  <!-- value attribute is used for the text that is displayed inside the btn. we have to use it because input is a single tag (i.e it doesn't have opening and closing tags that we can put our text in between ) -->
+
+    <hr>
+
+    <h2>Radio btns and Checkboxes</h2>
+
+    <h3>Radio btns</h3>
+    <p>choose a Color</p>
+    <input type="radio" id="red" name="color">
+    <label for="red">Red</label>
+    <input type="radio" id="green" name="color">
+    <label for="green">Green</label>
+    <input type="radio" id="white" name="color">
+    <label for="white">White</label>
+
+        <!--radio btns have to be linked together. this can be done by giving them all the same name attribute-->
+
+        <!--radio btns have to have a value attribute for  the value of the radio btn you chose to be sent after submitting the form. otherwise you get "name attribute="on" (in the above case, color="on") instead of color="THE ACTUAL COLOR YOU CHOSE" "-->
+
+    <h3>Checkboxes</h3>
+     <input type="checkbox" id="likesdogs" checked> <!--"checked" makes the checkbox checked be defualt. it's called a boolean attribute-->
+     <label for="likesdogs"></label>
+
+        <!--checkboxes don't have to be linked-->
+
+
+
+<!-- only one btn can be chosen from a list of Radio btns
+        any number of checkboxes can be chosen in a list of checkboxes -->
+
+     <hr>
+
+    <h2>Textarea</h2>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea</a>
+    <textarea name="" id="" cols="30" rows="10"></textarea> <!--"rows" &"cols" are for the starting defualt size. --> 
+
+    <hr>
+
+    <h2>select and options</h2>
+    <!-- using the example from Reddit search section -->
+    <form action="https://www.reddit.com/search/">
+        <label for="search">Search Term</label>
+        <input type="text" name="q" id="search" >
+        <label for="sort">Sort by:</label>
+        <select name="sort" id="sort"> <!--"sort" is the query "name" that reddit uses-->
+            <option value="top">Top</option>
+            <option value="new">New</option>
+            <option value="relevance">Relevance</option>
+        </select>
+        <input type="submit" value="go reddit">
+    </form>
+
+    <br>
+
+    <h1>MAAD VIC</h1>
+    <p> this is the what at you get in chrome's search bar (if you put "chicken" in the input field above):
+        https://www.reddit.com/search/?q=chicken </p>
+
+    <p> in the search bar you see many " sth="sth else" " stringed together after you search for sth.</p>
+    <ul> it's name="value".
+        <li> name: the name you set for an input.</li>
+        <li>value: the value you OR user set for an input.</li>
+    </ul>
+
+    <ul>
+        if it's an inputs where the user
+        <li> 1 TYPES IN (email, text, etc),   value is "what the user typed in" & the dev doesn't include a value attribute in  the html of the input.</li>
+        <li> 2 the user DOES NOT type in anything (radio, select, etc), the value must be set by the dev in the html of the input </li>
+    </ul> 
+
+    <hr>
+
+    <h2>Validation Demo Form</h2> 
+    <form action="">
+        <input type="text" placeholder="username" required maxlength="10" minlength="5"> <!--"Required" -- can't submit without filling this input field -->
+        <!--"maxlength" -- max No. chars-->
+        <!--"minlength" -- min No. chars-->
+        <input type="email" placeholder="email" required>
+    <!--"type="email" -- checks if the text typed in is in email form-->
+        <button>Sumbit!</button>
+    </form>
+
+
+    
+
+
+</body>
+</html>

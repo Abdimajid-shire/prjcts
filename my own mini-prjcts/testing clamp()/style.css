@@ -1,0 +1,28 @@
+
+body {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+h1 {
+    font-size: clamp(2rem, 7vmin, 3rem);
+}
+
+h1 {
+    font-size: clamp(2rem, 9vmin, 4rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 6vmin, 3rem);
+}
+
+h3 {
+    font-size: clamp(1rem, 5vmin, 2rem);
+}
+
+p {
+    font-size: clamp(1rem, 5vmin, 2rem);
+}
+
+/* we should avoid vw and vh for font sizes, since they're not zoomable. Bad for a11y */

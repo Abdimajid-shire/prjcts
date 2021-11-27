@@ -1,0 +1,56 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+div {
+    position: relative;
+    border: 1px solid purple;
+    padding: 1rem;
+    color: black;
+    /* overflow: hidden; */
+}
+
+div::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    /* right: 0; */
+    left: 50%;
+    width: 50%;
+    height: 0;
+    background-color: red;
+    z-index: -1;
+    transition: width .5s, height .7s, color 1s;
+}
+
+div::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 50%;
+    height: 0;
+    background-color: green;
+    z-index: -1;
+    
+    transition: width .5s, height .7s;
+}
+
+div:hover:after,
+div:hover::before
+ {
+    height: 100%;
+    width: 50%;
+}
+
+div:hover {
+    color: white;
+}
+
+ */
