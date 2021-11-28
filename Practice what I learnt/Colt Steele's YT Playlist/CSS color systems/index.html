@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>opacity VS rgba/hsla</h2>
+
+   <div class="container">
+    <div>
+        <h3>using opacity.</h3>
+        <h3>opacity affects everything in the element</h3>
+        <div class="box opacity">
+            <h3>I AM TEXT</h3>
+        </div>
+    </div>
+
+    <div>
+        <h3>using rgba/hsla.</h3>
+        <h3>rgba/hsla only affects the background of element</h3>
+        <div class="box rgba-hsla">
+            <h3>I AM TEXT</h3>
+        </div>
+    </div>
+</div>
+<p>you don't need to add the a in rgba/hsla you can just use rgb/hsl and add the Alpha (opacity) value</p> 
+<p>hsl(hue{color}, saturation{how strong the  color is}, lightness)</p>
+</body>
+</html>
