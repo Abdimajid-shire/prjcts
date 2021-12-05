@@ -1,0 +1,90 @@
+body {
+    text-align: center;
+    margin: 0%;
+}
+
+img {
+    width: 300px;
+    height: 190px;
+    border: 3px solid black;
+    margin: 0px;
+    padding: 10px;
+}
+
+img:hover {
+    border: 6px solid black;
+}
+
+.with img {
+    box-sizing: border-box;
+}
+
+button {
+    width: 13rem;
+    margin: 10px;
+    padding: 15px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border: 5px dashed black;
+}
+   
+
+button:nth-child(1) { 
+    background-color: yellow;
+    background-clip: content-box;
+    
+}
+
+
+button:nth-child(2) {
+    background:purple;
+    background-clip: padding-box;
+}
+
+
+button:nth-child(3) {
+    background:palegreen;
+    background-clip: border-box;
+}
+
+
+button:nth-child(4) {
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);;
+    -webkit-background-clip: text; 
+    background-clip: text;
+    color: transparent;
+    /* you can also use imges & gradients */
+}
+
+
+
+.display-property {
+    text-align: left;
+}
+
+.txt-center {
+    text-align:center;
+}
+
+
+
+.block {
+    background-color: pink;
+    display: block; /* it's block by default anyways*/
+    height: 100px;
+}
+
+.inline {
+    background-color: pink;
+    display: inline;
+    height: 100px; /*Useless*/
+    width:200px;  /*Useless*/
+}
+
+.display-property button {
+    border: 1px solid black;
+    font-size: .7rem;
+}
+
+
+

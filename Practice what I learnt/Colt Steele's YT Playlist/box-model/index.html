@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>box-sizing effect</h2>
+    <div class="with">
+        <h3>with box-sizing: border-box;</h3>
+        <p>the cards must have a height or box-sizing:border-box; won't work properly</p>
+        <div class="cont1">
+        <img src="Fluent-building-night.jpg" alt="">
+        <img src="Fluent-mountain-day.jpg" alt="">
+        <img src="Fluent-mountain-night.jpg" alt="">
+        </div>
+    </div>
+    <div class="without">
+        <h3>without box-sizing: border-box;</h3>
+        <p>i.e it's box-sizing: content-box; (the default)</p>
+        <div class="cont2">
+        <img src="Fluent-building-night.jpg" alt="">
+        <img src="Fluent-mountain-day.jpg" alt="">
+        <img src="Fluent-mountain-night.jpg" alt="">
+        
+        </div>
+    </div>   
+
+    <hr>
+
+    <h2>background-clip</h2>
+    <p>not supported in some  browsers. have to use a browser prefix</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip">mdn</a>
+    <div class="bc">
+        <button> content-box</button>
+        <button> padding-box</button>
+        <button> border-box</button>
+        <button> text-box</button>
+    </div>
+
+    <hr>
+    <div class="display-property">
+        <h2 class="txt-center">inline vs block vs inline- block</h2>
+        <p class="txt-center ">the width & height properties can't be changed in inline elements. <br> block elements take the entire line.<br> inline elements only take the space needed for their content. they  also can be given <strong>only</strong> horizontal padding & margin<br> inline-block are inline elements with changeable widths & heights and can be given <strong>both</strong> horizontal & vertical margin and padding   </p>
+        <h3 class="block">I AM A BLOCK HEADING</h3>
+        
+        <h3 class="inline">I AM AN INLINE HEADING</h3>
+        <button>I SHOW THAT INLINE ELEMENTS SHARE THE SAME LINE</button>
+        
+    </div>
+</body>
+</html>
